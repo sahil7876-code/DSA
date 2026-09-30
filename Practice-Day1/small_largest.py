@@ -8,12 +8,10 @@ a = []
 for i in range(n):
     num = int(input("Enter numbers: "))
     a.append(num)
-print(a)
+print("List: ",a)
 
-largest = a[0]
-sec_large = a[0]
-smallest = a[0]
-sec_small = a[0]
+largest = sec_large = a[0]
+smallest = sec_small = a[0]
 
 for i in a:
     if i < smallest:
@@ -28,7 +26,7 @@ for i in a:
     elif i > sec_large:
         sec_large = i
 
-print("Smallest element:", smallest)
+print("\nSmallest element:", smallest)
 print("Second smallest element:", sec_small)
 print("Largest element:", largest)
 print("Second largest element:", sec_large)
