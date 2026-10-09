@@ -1,86 +1,33 @@
+#print sum of 2 consecutive nodes in SLL
+
 class node:
     def __init__(self, val):
         self.data = val
         self.next = None
 
-
 class linkedlist:
     def __init__(self):
         self.head = None
 
-    def insert_at_position(self, new_node, position):
-
-        if position == 1:
-            new_node.next = self.head
-            self.head = new_node
-            return
-
-        temp = self.head
-        count = 1
-
-        while temp and count < position - 1:
-            temp = temp.next
-            count += 1
-
-        if temp == None:
-            print("Invalid position")
+    def append(self, new_node):
+        if self.head==None:
+            self.head=new_node
         else:
-            new_node.next = temp.next
-            temp.next = new_node
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next=new_node
 
-    def delete_at_position(self, position):
-
-        if self.head == None:
-            print("List is empty")
-            return
-
-        if position == 1:
-            self.head = self.head.next
-            return
-
-        temp = self.head
-        count = 1
-
-        while temp and count < position - 1:
-            temp = temp.next
-            count += 1
-
-        if temp == None or temp.next == None:
-            print("Invalid position")
-        else:
-            temp.next = temp.next.next
-    
-    def reverse(self):
-        prev=None
-        curr=self.head
-        while curr:
-            nextnode=curr.next
-            curr.next=prev
-            prev=curr
-            curr=nextnode
-        self.head=prev
-
-    def print(self):
-        temp = self.head
-
-        while temp:
-            print(temp.data)
+    def sum(self):
+        temp=self.head
+        while temp and temp.next:
+            print(temp.data + temp.next.data)
             temp = temp.next
 
-
-
-list = linkedlist()
-
-list.insert_at_position(node(10), 1)
-list.insert_at_position(node(20), 2)
-list.insert_at_position(node(30), 3)
-list.insert_at_position(node(40), 4)
-
-list.reverse()
-print("Before deletion:")
-list.print()
-
-list.delete_at_position(3)
-
-print("After deletion:")
-list.print()
+list=linkedlist()
+list.append(node(10))
+list.append(node(20))
+list.append(node(30))
+list.append(node(40))
+list.append(node(50))
+list.sum()
