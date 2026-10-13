@@ -109,6 +109,7 @@ class LL:
 
         self.head = prev
 
+    #Sum of 2 consecutive Numbers
     def sum(self):
         temp = self.head
 

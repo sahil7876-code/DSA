@@ -1,4 +1,4 @@
-# Deleteing the laternate node from singly linked list
+# Deleteing the alternate node from singly linked list
 class node:
     def __init__(self, val):
         self.data = val
