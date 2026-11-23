@@ -20,6 +20,7 @@ class LinkedList:
     def print(self):
         count = 0
         temp = self.head
+        print(temp.next.data)
 
         while temp:
             count += 1
@@ -38,6 +39,6 @@ n3 = Node(30)
 list.append(n1)
 list.append(n2)
 list.append(n3)
-list.append(Node(40))
+#list.append(Node(40))
 
 list.print()

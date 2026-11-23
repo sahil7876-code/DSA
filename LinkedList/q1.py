@@ -1,4 +1,4 @@
-#Insert a value at a position in LikedList
+# Creating a Singly Linked List
 
 class node:
     def __init__(self,val):
